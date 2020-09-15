@@ -1,0 +1,310 @@
+.mountain{
+  /* background-image: url('./Components/assets/mountains2.png'); */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgb(0, 184, 240);
+  animation-name: backgroundChange;
+  animation-duration: 20s;
+}
+
+@keyframes backgroundChange{
+  0% {  background-color: rgb(27, 27, 27);}
+  /* 0% {transform: translateY(100px); transform: translateX(800px);} */
+  50% {background-color: rgb(27, 27, 27);}
+  100% {background-color: rgb(0, 184, 240);}
+  /* 100% {transform: translate(0, 0);} */
+
+}
+
+.indianPlane{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 100px;
+  width: 15%;
+  height: 15%;
+  z-index: 1;
+  animation-duration: 10s;
+  animation-name: incomingIndia;
+  animation-timing-function: linear;
+  opacity: 0;
+  animation-direction: normal;
+  /* animation-fill-mode: backwards; */
+}
+
+@keyframes incomingIndia{
+  0% {transform: translate(0px, 0px); opacity: 1;}
+  /* 0% {transform: translateY(100px); transform: translateX(800px);} */
+  50% {transform: translate(-800px, 100px);}
+
+  98%{opacity: 1;}
+  100% {transform: translate(0, 0); opacity: 0;}
+
+}
+
+.indianBomb{
+  position: absolute;
+  top: 0;
+  margin-top: 240px;
+  margin-left: 500px;
+  /* transform: translate(0px, 100px); */
+  width: 7%;
+  height: 7%;
+  z-index: 0;
+  opacity: 0;
+  animation-name: bombDrop;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-delay: 5s;
+  /* visibility: hidden; */
+}
+
+@keyframes bombDrop{
+  0% {visibility: hidden; transform: translateY(0); opacity: 1;}
+  90% {opacity: 1;}
+  100% {visibility: visible; transform: translate(-100px, 280px); opacity: 0;}
+}
+
+.moon{
+  /* background-image: url('./Components/assets/mountains2.png'); */
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 400px;
+  margin-top: 20px;
+  width: 9%;
+  height: 15%;
+  z-index: -1;
+  opacity: 0;
+  animation-name: disapperMoon;
+  animation-duration: 20s;
+  /* background-color: black; */
+}
+
+@keyframes disapperMoon{
+  0% {opacity: 1;}
+  50% {opacity: 1;}
+  80% {opacity: 0;}
+}
+
+.clouds{
+
+}
+
+.cloud1{
+  /* background-image: url('./Components/assets/mountains2.png'); */
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* margin-right: -100px; */
+  margin-top: 50px;
+  width: 20%;
+  height: 20%;
+  /* background-color: black; */
+}
+
+.cloud2{
+  /* background-image: url('./Components/assets/mountains2.png'); */
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 500px;
+  margin-top: 50px;
+  width: 20%;
+  height: 20%;
+  /* background-color: black; */
+}
+
+.tree0{
+  /* background-image: url('./Components/assets/mountains2.png'); */
+  position: absolute;
+  bottom: 20px;
+  left:100px;
+  width: 20%;
+  height: 20%;
+  animation-name: disapperMoon;
+  opacity: 0;
+  animation-duration: 20s;
+  /* background-color: black; */
+}
+
+.tree1{
+  /* background-image: url('./Components/assets/mountains2.png'); */
+  position: absolute;
+  bottom: 20px;
+  left: 400px;
+  width: 20%;
+  height: 20%;
+  animation-name: disapperMoon;
+  opacity: 0;
+  animation-duration: 20s;
+  /* background-color: black; */
+}
+
+.explosion{
+  bottom: 30px;
+  left: 300px;
+  position: absolute;
+  z-index: 1;
+  width: 20%;
+  height: 40%;
+  opacity: 0;
+  animation-duration: 4s;
+  animation-delay: 7s;
+  animation-name: explode;
+  /* margin-left: 0px; */
+}
+
+@keyframes explode{
+  0% { opacity: 1;}
+  /* 50% {opacity: 1;} */
+  50% { opacity: 1;}
+  90% {opacity: 1;}
+  100% { opacity: 0;}
+}
+
+.f16{
+  top: 100px;
+  left: 150px;
+  position: absolute;
+  height: 12%;
+  width: 12%;
+  opacity: 0;
+  animation-name: disappearF16;
+  animation-duration: 13s;
+  animation-delay: 15s;
+}
+
+@keyframes disappearF16{
+  0% { opacity: 0;}
+  /* 50% {opacity: 1;} */
+  5% { opacity: 1;}
+  90% {opacity: 1;}
+  100% { opacity: 0;}
+}
+
+.mig21{
+  top: 100px;
+  right: 500px;
+  position: absolute;
+  width: 15%;
+  opacity: 0;
+  height: 15%;
+  animation-duration: 10s;
+  animation-delay: 15s;
+  animation-name: disappearMig21;
+  animation-fill-mode: backwards;
+}
+
+@keyframes disappearMig21{
+  0% { opacity: 0;}
+  /* 50% {opacity: 1;} */
+  7% { opacity: 1;}
+  95% {opacity: 1;}
+  100% { opacity: 0;}
+}
+
+.missile{
+  top: 120px;
+  left: 190px;
+  position: absolute;
+  height: 7%;
+  width: 5%;
+  opacity: 0;
+  animation-name: missileShot;
+  animation-delay: 22s;
+  animation-duration: 3s;
+}
+
+@keyframes missileShot{
+  0% { opacity: 1; transform: translate(0, 0);}
+  /* 1% { opacity: 1; transform: translate(-650px, 0);} */
+  /* 50% {opacity: 1;} */
+  /* 30% { opacity: 1;} */
+  99% {opacity: 1; transform: translate(500px, 0);}
+  100% { opacity: 0; transform: translate(500px, 0);}
+}
+
+.shot{
+  top: 55px;
+  right: 500px;
+  position: absolute;
+  width: 20%;
+  opacity: 0;
+  height: 30%;
+  animation-duration: 3s;
+  animation-delay: 24s;
+  animation-name: disappearMig21;
+  animation-fill-mode: backwards;
+}
+
+@keyframes shot{
+  0% { opacity: 0;}
+  /* 50% {opacity: 1;} */
+  1% { opacity: 1;}
+  99% {opacity: 1;}
+  100% { opacity: 0;}
+}
+
+.chute{
+  top: 30px;
+  right: 500px;
+  position: absolute;
+  width: 10%;
+  opacity: 0;
+  height: 30%;
+  animation-duration: 10s;
+  animation-name: disappearMig21;
+  animation-fill-mode: forwards;
+  animation-delay: 27s;
+}
+
+@keyframes chute{
+  0% { opacity: 0;}
+  /* 50% {opacity: 1;} */
+  1% { opacity: 1;}
+  99% {opacity: 1;}
+  100% { opacity: 0;}
+}
+
+.abhinandan{
+  bottom: 30px;
+  right: 50px;
+  position: absolute;
+  width: 35%;
+  opacity: 0;
+  height: 50%;
+  animation-duration: 10s;
+  animation-name: disappearMig21;
+  animation-fill-mode: forwards;
+  animation-delay: 30s;
+}
+
+.txt{
+  text-align: center;
+  font-family: 'Patua One', cursive;
+  color: white;
+  font-size: 80px;
+  opacity: 0;
+  animation-duration: 10s;
+  animation-name: disappearMig21;
+  animation-fill-mode: forwards;
+  animation-delay: 33s;
+  z-index: 0;
+}
+.textDiv{
+  /* display: flex; */
+  margin: auto;
+  margin-top: 150px;
+  height: 100%;
+  width: 100%;
+}
+
+*{
+  overflow: hidden;
+}
